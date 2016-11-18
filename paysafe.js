@@ -126,16 +126,16 @@ function getReports(){
             var report = metaData[key];
           //  var idate = moment(report['Trans Date']).format();
          //   console.log(idate);
-           paysafeservice.saveData(report, function(result) {
-                if(key == (metaData.length-1)){
-                    log.info("Mongo database:", new Date()- dataBaseTime, "ms");
-                }
-            });
-            paysafemysqlservice.saveData(report, function (result) {
-                if(key == (metaData.length-1)){
-                	log.info("Mysql database:", new Date()- dataBaseTime, "ms");
-                }
-            })
+          // paysafeservice.saveData(report, function(result) {
+             //   if(key == (metaData.length-1)){
+               //     log.info("Mongo database:", new Date()- dataBaseTime, "ms");
+               // }
+           // });
+           // paysafemysqlservice.saveData(report, function (result) {
+             //   if(key == (metaData.length-1)){
+               // 	log.info("Mysql database:", new Date()- dataBaseTime, "ms");
+               // }
+           // })
         }
     });
 }
